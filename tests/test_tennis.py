@@ -2,7 +2,8 @@
 
 import pytest
 
-from src.tennis import TennisGame1, TennisGame2, TennisGame3
+from src.tennis_game_1 import TennisGame1, TennisGame3
+from src.tennis_game_2 import TennisGame2
 from tests.conftest import test_cases
 
 pytestmark = pytest.mark.tennis
