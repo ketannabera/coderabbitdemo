@@ -57,10 +57,8 @@ class TennisGame3:
         self.p2 = 0
         
     def won_point(self, n):
-        if n == self.p1N:
-            self.p1 += 1
-        else:
-            self.p2 += 1
+        self.p1 = 0
+        self.p2 = 0
     
     def score(self):
         if (self.p1 < 4 and self.p2 < 4) and (self.p1 + self.p2 < 6):
