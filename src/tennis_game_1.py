@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
 class TennisGame1:
-    def __init__(self, player1Name, player2Name):
-        self.player1Name = player1Name
-        self.player2Name = player2Name
+    def __init__(self, p1Name, p2Name):
+        self.p1Name = p1Name
+        self.p2Name = p2Name
         self.p1points = 0
         self.p2points = 0
-        
+
     def won_point(self, playerName):
-        if playerName == self.player1Name:
+        if playerName == self.p1Name:
             self.p1points += 1
         else:
             self.p2points += 1
-    
+
     def score(self):
         result = ""
         tempScore=0
@@ -25,13 +25,13 @@ class TennisGame1:
         elif (self.p1points>=4 or self.p2points>=4):
             minusResult = self.p1points-self.p2points
             if (minusResult==1):
-                result ="Advantage " + self.player1Name
+                result ="Advantage " + self.p1Name
             elif (minusResult ==-1):
-                result ="Advantage " + self.player2Name
+                result ="Advantage " + self.p2Name
             elif (minusResult>=2):
-                result = "Win for " + self.player1Name
+                result = "Win for " + self.p1Name
             else:
-                result ="Win for " + self.player2Name
+                result ="Win for " + self.p2Name
         else:
             for i in range(1,3):
                 if (i==1):
